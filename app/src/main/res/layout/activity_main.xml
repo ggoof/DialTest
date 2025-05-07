@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device Mobile Number"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/deviceNumberEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:enabled="false"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outgoing Call Number"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/outgoingNumberEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:text="9492944315"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Times"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/callTimesEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="1"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- NEW: Call Interval -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Interval (sec)"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/callIntervalEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="30"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/dialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dial Number"/>
+
+
+    <!-- new Auto Answer checkbox -->
+    <CheckBox
+        android:id="@+id/autoAnswerCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Answer" 
+        android:layout_marginTop="12dp"/>
+
+    <!-- NEW: scrollable log area -->
+    <ScrollView
+        android:id="@+id/logScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="always">
+
+        <TextView
+            android:id="@+id/callStatusLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:text="Ready"
+            android:textSize="14sp"
+            android:padding="8dp"/>
+    </ScrollView>
+</LinearLayout>
